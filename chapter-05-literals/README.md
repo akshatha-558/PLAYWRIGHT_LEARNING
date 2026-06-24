@@ -6,14 +6,14 @@ Literals are the **raw values** you bake straight into your source code — no c
 
 | File | Topic | What it shows |
 |------|-------|---------------|
-| `22_Literal.js` | Primitive literals + `typeof` | string, boolean, number, null, undefined and their `typeof` output |
+| `22_literal.js` | Primitive literals + `typeof` | string, boolean, number, null, undefined and their `typeof` output |
 | `23_null_undefined.js` | `null` vs `undefined` deep-dive | who sets what, `==` vs `===`, the `typeof null === "object"` quirk |
 | `24_null.js` | Falsy siblings | `null`, undeclared, `0`, `""` — what `typeof` returns |
-| `25_Literal_All.js` | Number literal forms | hex `0xFF`, octal `0o77`, exponent `1e6`, `1.5e-4` |
-| `26_Literal_Number_all.js` | Every number form, end-to-end | decimal, binary, octal, hex, float, exponent, separator, `BigInt`, `Infinity`, `NaN`, `Number.*` constants |
-| `27_String.js` | Single vs double quotes | escaping `"` inside `'…'` and `'` inside `"…"`, `typeof` strings |
-| `28_Template_Literal.js` | Template literals in practice | interpolation, dynamic API URLs, Playwright locators, screenshot paths, JSON payloads |
-| `29_Backtick_single_double.js` | `'` vs `"` vs `` ` `` | when to use which, interpolation, multiline, expression injection |
+| `25_literal_all.js` | Number literal forms | hex `0xFF`, octal `0o77`, exponent `1e6`, `1.5e-4` |
+| `26_literal_number_all.js` | Every number form, end-to-end | decimal, binary, octal, hex, float, exponent, separator, `BigInt`, `Infinity`, `NaN`, `Number.*` constants |
+| `27_string.js` | Single vs double quotes | escaping `"` inside `'…'` and `'` inside `"…"`, `typeof` strings |
+| `28_template_literal.js` | Template literals in practice | interpolation, dynamic API URLs, Playwright locators, screenshot paths, JSON payloads |
+| `29_backtick_single_double.js` | `'` vs `"` vs `` ` `` | when to use which, interpolation, multiline, expression injection |
 
 ## Concepts covered
 
@@ -33,7 +33,7 @@ Literals are the **raw values** you bake straight into your source code — no c
 
 ---
 
-### 22_Literal.js
+### 22_literal.js
 
 Five primitive literals stitched together with `typeof` — the SDET's first peek at what JS calls each value.
 
@@ -123,7 +123,7 @@ number
 
 ---
 
-### 25_Literal_All.js
+### 25_literal_all.js
 
 Number bases and exponent notation in one screen. Hex `0xFF` = 255, octal `0o77` = 63, `1e6` = 1,000,000.
 
@@ -148,7 +148,7 @@ number
 
 ---
 
-### 26_Literal_Number_all.js
+### 26_literal_number_all.js
 
 The grand tour: every number form, every special value, every `Number.*` constant. Bookmark this file.
 
@@ -211,7 +211,7 @@ EPSILON: 2.220446049250313e-16
 
 ---
 
-### 27_String.js
+### 27_string.js
 
 Single and double quotes behave identically — pick one and escape the other when you need it inline.
 
@@ -242,7 +242,7 @@ JS has no `char` type — a single character is still a `string`.
 
 ---
 
-### 28_Template_Literal.js
+### 28_template_literal.js
 
 Backticks (`` ` ``) are the SDET's best friend — interpolation for env-aware API URLs, Playwright locators, screenshot paths, and log lines.
 
@@ -283,7 +283,7 @@ Note: the `await page.locator(...)` and `page.screenshot(...)` lines need a Play
 
 ---
 
-### 29_Backtick_single_double.js
+### 29_backtick_single_double.js
 
 Side-by-side: `'…'` and `"…"` are dumb strings, `` `…` `` is a smart string. Interpolation, expressions, and multiline all live in the backtick.
 
@@ -342,10 +342,10 @@ New way: The Laptop costs 50000 rupees.
 
 ```bash
 # Run a single file directly
-node chapter_05_Literal/22_Literal.js
-node chapter_05_Literal/26_Literal_Number_all.js
+node chapter_05_Literal/22_literal.js
+node chapter_05_Literal/26_literal_number_all.js
 
-# 28_Template_Literal.js uses Playwright APIs — run only the
+# 28_template_literal.js uses Playwright APIs — run only the
 # console.log lines, or wrap in a Playwright test before executing.
 ```
 

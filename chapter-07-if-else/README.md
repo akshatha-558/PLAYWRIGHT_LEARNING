@@ -6,17 +6,17 @@ Control flow is where code starts making decisions. This chapter walks SDETs thr
 
 | File | Topic | What it shows |
 |------|-------|---------------|
-| `48_IF_ESLE.js` | Basic if/else | Voting age check |
-| `49_If_elseif_else.js` | else-if ladder | Score → grade A/B/C/D/F |
-| `50_REAL_IF_ELSE.js` | Nested if/else | Role-based access (admin/editor/viewer) |
-| `51_API_IF_ELSE.js` | API status branching | 200 / 404 / default |
-| `52_IQ_IF_ELSE.js` | Truthy vs falsy | What counts as `true` inside `if(...)` |
-| `53_IF_ELSE_real.js` | Logical ops + if | Login with `&&` across multiple flags |
-| `54_IQ.js` | One-liner if | `if` without braces |
-| `55_IE.js` | Solo `if` | Standalone `if` is legal — no `else` required |
-| `56_IQ_EVEN_ODD.js` | Modulo + if/else | Even / Odd check |
-| `57_Grade_Calc.js` | Grade calculator | Marks → grade ladder |
-| `58_LEAP_YEAR.js` | Leap year logic | `% 4`, `% 100`, `% 400` combo |
+| `48_ifelse.js` | Basic if/else | Voting age check |
+| `49_if_elseif_else.js` | else-if ladder | Score → grade A/B/C/D/F |
+| `50_real_ex_ifelse.js` | Nested if/else | Role-based access (admin/editor/viewer) |
+| `51_api_ex_if_ifelse_else.js` | API status branching | 200 / 404 / default |
+| `52_iq_ex_ifelse.js` | Truthy vs falsy | What counts as `true` inside `if(...)` |
+| `53_if_elseif_real.js` | Logical ops + if | Login with `&&` across multiple flags |
+| `54_iq_ex.js` | One-liner if | `if` without braces |
+| `55_iq_ex.js` | Solo `if` | Standalone `if` is legal — no `else` required |
+| `56_even_odd.js` | Modulo + if/else | Even / Odd check |
+| `57_grade.js` | Grade calculator | Marks → grade ladder |
+| `58_leapyear.js` | Leap year logic | `% 4`, `% 100`, `% 400` combo |
 
 ## Concepts covered
 
@@ -31,7 +31,7 @@ Control flow is where code starts making decisions. This chapter walks SDETs thr
 
 ---
 
-### 48_IF_ESLE.js — basic if/else
+### 48_ifelse.js — basic if/else
 
 Two-way fork using a single condition. Classic "can this user vote?" check.
 
@@ -51,7 +51,7 @@ You are allowed to vote!
 
 ---
 
-### 49_If_elseif_else.js — else-if ladder
+### 49_if_elseif_else.js — else-if ladder
 
 Multi-way branching. First matching condition wins — order matters.
 
@@ -78,7 +78,7 @@ C
 
 ---
 
-### 50_REAL_IF_ELSE.js — nested if for role-based access
+### 50_real_ex_ifelse.js — nested if for role-based access
 
 Outer gate checks login, inner ladder routes by role. Same shape as RBAC on `app.vwo.com`.
 
@@ -122,7 +122,7 @@ No idea you may be a guest! role
 
 ---
 
-### 51_API_IF_ELSE.js — branching on API status code
+### 51_api_ex_if_ifelse_else.js — branching on API status code
 
 Bread-and-butter for SDETs — branch on response codes.
 
@@ -145,7 +145,7 @@ API are working fine!
 
 ---
 
-### 52_IQ_IF_ELSE.js — truthy vs falsy
+### 52_iq_ex_ifelse.js — truthy vs falsy
 
 `0` is falsy, so the `else` branch fires. Comments list the rest of the falsy crew.
 
@@ -178,7 +178,7 @@ Bye
 
 ---
 
-### 53_IF_ELSE_real.js — logical operators inside if
+### 53_if_elseif_real.js — logical operators inside if
 
 Combine `&&` to require multiple conditions at once. Watch the `isAccountLocked` flag — it's `true`, so the gate still opens here (semantic bug worth a chuckle).
 
@@ -202,7 +202,7 @@ Allowed to enter
 
 ---
 
-### 54_IQ.js — one-liner if without braces
+### 54_iq_ex.js — one-liner if without braces
 
 If the body is a single statement, braces are optional. Readable for one-liners, dangerous when someone adds a second line later.
 
@@ -218,7 +218,7 @@ x is big
 
 ---
 
-### 55_IE.js — solo `if` is fine
+### 55_iq_ex.js — solo `if` is fine
 
 You don't need `else`. An `if` block by itself is valid syntax.
 
@@ -236,7 +236,7 @@ if (true) {
 
 ---
 
-### 56_IQ_EVEN_ODD.js — even/odd with modulo
+### 56_even_odd.js — even/odd with modulo
 
 The interview classic. `% 2 === 0` → even, otherwise odd.
 
@@ -256,7 +256,7 @@ if (num % 2 === 0) {
 
 ---
 
-### 57_Grade_Calc.js — grade calculator
+### 57_grade.js — grade calculator
 
 Same ladder pattern as file 49, applied to a marks field.
 
@@ -282,7 +282,7 @@ Grade: B
 
 ---
 
-### 58_LEAP_YEAR.js — leap year check
+### 58_leapyear.js — leap year check
 
 Combines `&&` and `||` into a single condition. Divisible by 4 AND not by 100, OR divisible by 400.
 
@@ -329,17 +329,17 @@ Gotchas SDETs trip on:
 ## How to run
 
 ```bash
-node chapter_07_If_else/48_IF_ESLE.js
-node chapter_07_If_else/49_If_elseif_else.js
-node chapter_07_If_else/50_REAL_IF_ELSE.js
-node chapter_07_If_else/51_API_IF_ELSE.js
-node chapter_07_If_else/52_IQ_IF_ELSE.js
-node chapter_07_If_else/53_IF_ELSE_real.js
-node chapter_07_If_else/54_IQ.js
-node chapter_07_If_else/55_IE.js
-node chapter_07_If_else/56_IQ_EVEN_ODD.js
-node chapter_07_If_else/57_Grade_Calc.js
-node chapter_07_If_else/58_LEAP_YEAR.js
+node chapter_07_If_else/48_ifelse.js
+node chapter_07_If_else/49_if_elseif_else.js
+node chapter_07_If_else/50_real_ex_ifelse.js
+node chapter_07_If_else/51_api_ex_if_ifelse_else.js
+node chapter_07_If_else/52_iq_ex_ifelse.js
+node chapter_07_If_else/53_if_elseif_real.js
+node chapter_07_If_else/54_iq_ex.js
+node chapter_07_If_else/55_iq_ex.js
+node chapter_07_If_else/56_even_odd.js
+node chapter_07_If_else/57_grade.js
+node chapter_07_If_else/58_leapyear.js
 ```
 
 ## Takeaway

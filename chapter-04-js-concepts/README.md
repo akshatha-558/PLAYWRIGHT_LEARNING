@@ -117,16 +117,20 @@ LearnPlaywrightBatch2x/
 │   ├── VS_Code_keyboard_shortcut_mac.md     # macOS VS Code shortcuts
 │   └── VS_Code_keyboard_shortcut_windows.md # Windows VS Code shortcuts
 │
-├── chapter_04_Javascript_Concepts/     🚧 var / let / const & hoisting
-│   ├── 09_var_let_const.js             # var, let, const basics
-│   ├── 10_functions.js                 # Function declaration & calls
+├── chapter_04_js_concepts/             🚧 var / let / const & hoisting
+│   ├── 09_var_let_hoist.js             # var, let, const basics + hoisting
+│   ├── 10_function.js                  # Function declaration & calls
 │   ├── 11_var_explained.js             # var deep dive
-│   ├── 12_let_peope_love.js            # let deep dive
+│   ├── 12_let_people_love.js           # let deep dive
 │   ├── 13_const_explained.js           # const deep dive
-│   ├── 14_var_functionscope.js         # var function scope
-│   ├── 15_let_scope.js                 # let block scope
-│   ├── 16_Hoisting.js                  # Variable hoisting explained
-│   └── 17_hoisting_fn.js               # Function hoisting
+│   ├── 14_var_func_scope.js            # var function scope
+│   ├── 15_let_scope_explained.js       # let block scope
+│   ├── 16_hoisting.js                  # Variable hoisting explained
+│   ├── 17_hoisting_fun.js              # Function hoisting
+│   ├── 18_let_hoisting.js              # let hoisting behavior
+│   ├── 19_let_hoisting_block.js        # let block-level hoisting
+│   ├── 20_const.js                     # const behavior
+│   └── 21_jr_qa.js                     # JR QA interview questions
 │
 └── README.md                           👋 You are here
 ```

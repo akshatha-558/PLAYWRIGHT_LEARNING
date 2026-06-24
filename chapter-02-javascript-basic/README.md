@@ -6,7 +6,7 @@ First real touch of JavaScript syntax for the batch. We open the engine hood wit
 
 | File | Topic | What it shows |
 | --- | --- | --- |
-| `05_JS_Basics.js` | Variable declaration & reassignment | Declaring with `var`, printing with `console.log`, then mutating the value |
+| `05_js.js` | Variable declaration & reassignment | Declaring with `var`, printing with `console.log`, then mutating the value |
 
 ## Concepts covered
 
@@ -18,7 +18,7 @@ First real touch of JavaScript syntax for the batch. We open the engine hood wit
 
 ---
 
-### 05_JS_Basics.js
+### 05_js.js
 
 Declares a `var` named `v`, logs it, then reassigns it. The second assignment has no `console.log` after it, so only the first value is printed — a subtle reminder that assignment alone produces no output. ✅
 
@@ -40,7 +40,7 @@ Expected output:
 ## How to run
 
 ```bash
-node chapter_02_Javascript_Concepts/05_JS_Basics.js
+node chapter_02_Javascript_Concepts/05_js.js
 ```
 
 You'll need Node.js installed (`node -v` should print a version). No `npm install` needed for this chapter — it's pure JavaScript.

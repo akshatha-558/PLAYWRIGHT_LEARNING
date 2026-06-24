@@ -18,6 +18,10 @@
 
 ---
 
+> **🔄 Repo restructured:** Flat chapter folders replaced by tiered categories (see [📂 Repository Structure](#-repository-structure)). Files keep original lesson numbers. Run commands updated with new paths — if something looks off, open an issue.
+
+---
+
 ## Welcome to Batch 2x
 
 This repository is your **week-by-week course companion** for the LearnPlaywright Batch 2x cohort by [The Testing Academy](https://thetestingacademy.com). Code shown in lectures lands here so you can read it, run it, and practice on it.
@@ -97,146 +101,56 @@ graph TB
 
 ---
 
-## 📚 Current Folder Structure
+## 📂 Repository Structure
 
 ```
-LearnPlaywrightBatch2x/
-├── chapter_01_Basics/                  ✅ Hello World, env setup, hot code
-│   ├── 01_Basics.js                    # First console.log program
-│   ├── 02_JS.js                        # Variables & a simple loop
-│   ├── 03_JS_Verify_Setup.js           # Verify Node.js/OS/arch
-│   └── 04_HotCode.js                   # JIT & "hot" code paths
+PLAYWRIGHT_LEARNING/
 │
-├── chapter_02_Javascript_Concepts/     ✅ JS Basics
-│   └── 05_JS_Basics.js                 # Variables & console output
+├── 01-javascript-basics/               # JavaScript fundamentals
+│   ├── 01-introduction/                # Hello World, env setup
+│   ├── 02-variables-hoisting/          # var/let/const, TDZ, scope
+│   ├── 03-literals-data-types/         # null, number, string, template
+│   └── 04-operators/                   # arithmetic, comparison, logical
 │
-├── chapter_03_Identifier_Literals/     ✅ Identifiers, literals & comments
-│   ├── 06_Identifier_Rules.js          # Valid identifier names
-│   ├── 07_Identifier_Part2.js          # Naming conventions (camelCase, PascalCase, snake_case)
-│   ├── 08_Comments.js                  # Single-line & multi-line comments
-│   ├── js_identifier_rules.js          # Identifier rules reference
-│   ├── VS_Code_keyboard_shortcut_mac.md     # macOS VS Code shortcuts
-│   └── VS_Code_keyboard_shortcut_windows.md # Windows VS Code shortcuts
+├── 02-control-flow/                    # Program flow
+│   ├── 01-conditionals/                # if/else, switch
+│   ├── 02-user-input/                  # readline, prompt-sync
+│   └── 03-loops/                       # for, while, do-while
 │
-├── chapter_04_Javascript_Concepts/     ✅ var / let / const, hoisting & TDZ
-│   ├── 09_var_let_const.js             # var, let, const basics
-│   ├── 10_functions.js                 # Function declaration & calls
-│   ├── 11_var_explained.js             # var deep dive
-│   ├── 12_let_peope_love.js            # let deep dive
-│   ├── 13_const_explained.js           # const deep dive
-│   ├── 14_var_functionscope.js         # var function scope
-│   ├── 15_let_scope.js                 # let block scope
-│   ├── 16_Hoisting.js                  # Variable hoisting explained
-│   ├── 17_hoisting_fn.js               # Function hoisting
-│   ├── 18_let_hoisting.js              # let hoisting & Temporal Dead Zone (TDZ)
-│   ├── 19_let_hoisting_block.js        # Block-scoped TDZ shadowing
-│   ├── 20_let_const.js                 # const hoisting (TDZ for const)
-│   └── 21_Jr_QA.js                     # Interview Q&A — TDZ trap with const
+├── 03-data-structures/                 # Core data structures
+│   ├── 01-arrays/                      # creation, methods, iteration
+│   ├── 02-strings/                     # properties, search, transform
+│   ├── 03-objects/                     # creation, spread, get/set
+│   └── 04-2d-arrays/                   # nested arrays, patterns
 │
-├── chapter_05_Literal/                 ✅ Literals — null, numbers, strings, template
-│   ├── 22_Literal.js                   # Literal kinds + typeof
-│   ├── 23_null_undefined.js            # null vs undefined deep dive
-│   ├── 24_null.js                      # Empty values — null, undefined, "", 0
-│   ├── 25_Literal_All.js               # All literal forms at a glance
-│   ├── 26_Literal_Number_all.js        # Number literals — decimal, binary, octal, hex, BigInt
-│   ├── 27_String.js                    # Single vs double quotes
-│   ├── 28_Template_Literal.js          # Backticks — interpolation in Playwright selectors/logs
-│   └── 29_Backtick_single_double.js    # ' vs " vs ` — the one-page summary
+├── 04-functions/                       # Functions deep dive
+│   │                                  # declarations, expressions, arrow,
+│   │                                  # closure, IIFE, spread, scope
 │
-├── chapter_06_Operator/                ✅ Operators — arithmetic, comparison, logical
-│   ├── 30_Operator.js                  # Assignment operator =
-│   ├── 31_Arithmetic_OP.js             # + - * /
-│   ├── 32_Modulus_OP.js                # % — odd/even trick
-│   ├── 33_Expo_OP.js                   # ** exponentiation
-│   ├── 34_IQ.js                        # Compound assignment: += -= *= /= %=
-│   ├── 35_Comparsion_OP.js             # > < >= <= == === != !==
-│   ├── 36_Comparsion_Strict_loose.js   # Loose vs strict — number == string traps
-│   ├── 37_IQ_Loose_Strict.js           # Interview quick-fire: 0 == "" == "0"
-│   ├── 38_Confusing_Comparsion.js      # 🔥 == vs === full reference (NaN, [], null, typeof)
-│   ├── 39_Logical_Op.js                # && || !
-│   ├── 40_String_Con_Op.js             # + on strings = concatenation
-│   ├── 41_Ternary_Op.js                # condition ? a : b (with nesting, SLA, env URLs)
-│   ├── 42_Type_Op.js                   # typeof — string, number, object, []
-│   ├── 43_Incre_Decre_Op.js            # ++ / -- pre vs post
-│   ├── 44_Null_Op.js                   # ?? nullish coalescing
-│   ├── 45_Post_Increment.js            # post ++ — assign-then-increment
-│   ├── 46_IQ_INCREMENT_D.js            # Interview: value of a++
-│   └── 47_Advance_ID_.js               # 🔥 Pre/post mix in one expression (IQ trap)
+├── 05-asynchronous-js/                 # Async programming
+│   ├── 01-callbacks/                   # sync, async, callback hell
+│   ├── 02-promises/                    # then/catch, Promise.all
+│   └── 03-async-await/                 # async/await, parallel, sequential
 │
-├── chapter_07_If_else/                 ✅ If / Else — control flow basics
-│   ├── 48_IF_ESLE.js                   # Basic if / else with age check
-│   ├── 49_If_elseif_else.js            # Grade ladder with else-if
-│   ├── 50_REAL_IF_ELSE.js              # Nested if-else — login + role checks
-│   ├── 51_API_IF_ELSE.js               # API status code branching
-│   ├── 52_IQ_IF_ELSE.js                # Truthy vs falsy values
-│   ├── 53_IF_ELSE_real.js              # Logical operators + if-else (auth logic)
-│   ├── 54_IQ.js                        # One-line if without braces
-│   ├── 55_IE.js                        # Empty if block
-│   ├── 56_IQ_EVEN_ODD.js               # Even / odd with modulus
-│   ├── 57_Grade_Calc.js                # Grade calculator (A–F)
-│   └── 58_LEAP_YEAR.js                 # Leap year rules (% 4, % 100, % 400)
+├── 06-playwright-automation/           # Playwright testing
+│   │                                  # config, tests, playwright tasks
 │
-├── chapter_08_Switch_Statement/        ✅ Switch cases
-│   ├── 59_Switch.js                    # Switch statement basics
-│   ├── 60_No_Break.js                  # Fall-through when `break` is missing
-│   ├── 61_Default.js                   # `default` branch
-│   ├── 62_REAL_TIME_EXAMPLE.js         # Real-world switch usage
-│   ├── 63_Switch_Group.js              # Grouped cases (shared body)
-│   ├── 64_IQ.js                        # Interview Q — switch trap 1
-│   ├── 65_IQ2.js                       # Interview Q — switch trap 2
-│   ├── 66_IQ3.js                       # Interview Q — switch trap 3
-│   └── 67_IQ4.js                       # Interview Q — switch trap 4
+├── 07-typescript-oop/                  # TypeScript & OOP
+│   ├── 01-typescript-basics/           # modules, exports, utils
+│   ├── 02-classes-objects/             # (coming soon)
+│   ├── 03-encapsulation/               # (coming soon)
+│   ├── 04-inheritance/                 # (coming soon)
+│   ├── 05-polymorphism/                # (coming soon)
+│   └── 06-oop-interview-questions/     # (coming soon)
 │
-├── chapter_09_UserInput/               ✅ Reading user input in Node
-│   ├── 68_User_Input.js                # Browser `prompt()` — does NOT work in Node
-│   ├── 69_Node_readline.js             # Node built-in `readline` (async)
-│   └── 70_prompt_sync.js               # `prompt-sync` npm package (sync)
+├── 08-practice-tasks/                  # Daily coding tasks
+│                                      # may/june task solutions
 │
-├── chapter_10_Loops/                   ✅ for, while, do-while, for-of/in, break/continue
-│   ├── 71_For_loop.js                  # Introducing the for loop
-│   ├── 72_For_loop.js                  # for loop with <= condition
-│   ├── 73_For_Loop2.js                 # Variable naming & loop boundaries
-│   ├── 74_IQ.js                        # Nested if/else inside a for loop
-│   ├── 75_For_OF_IN_EACH.js            # while loop — retry logic (arrays preview)
-│   ├── 76_While.js                     # while loop — init, condition, update
-│   ├── 77_Do_While.js                  # do-while — guaranteed one execution
-│   ├── 78_Do_While.js                  # do-while retry example
-│   ├── 79_IQ.js                        # while countdown (i--)
-│   ├── 80_IQ.js                        # do-while off-by-one trap
-│   ├── 81_IQ.js                        # for with `continue`
-│   └── 82_IQ.js                        # do-while infinite-loop trap
-│
-├── chapter_11_Arrays/                  ✅ Arrays — creation, access, add/remove, search, iterate, transform, sort, slice/splice, concat, checking
-│   ├── 83_Arrays.js                    # Arrays basics — literal, index, length, mixed types
-│   ├── 84_Arrays.js                    # Array constructor, Array.of(), Array.from()
-│   ├── 85_Access_Array.js              # Accessing & modifying elements, .at() with negative index
-│   ├── 86_Arrays_Adding_Remove.js      # push, pop, unshift, shift
-│   ├── 87_Adding_Remove2.js            # splice — add, remove, replace at any position
-│   ├── 88_REAL_Example.js              # Real-world browser list manipulation
-│   ├── 89_Searching.js                 # indexOf, lastIndexOf, includes, find, findIndex, findLast
-│   ├── 90_Iterate.js                   # for, for...of, forEach, for...in, .entries()
-│   ├── 91_Transform_Array.js           # map, filter, reduce, flat
-│   ├── 92_Arrays.js                    # sort — lexicographic default, compareFn for numeric/desc
-│   ├── 93_Array_Slicing.js             # slice (non-destructive copy) vs splice (in-place surgery)
-│   ├── 94_Concat_array.js              # concat, spread (...), join
-│   └── 95_Array_Checking.js            # Array.isArray, every, some
-│
-├── chapter_12_Funtions/                ✅ Functions — declaration, params/args, return, expressions, arrow
-│   ├── 96_Functions.js                 # Define + call — first function
-│   ├── 97_Type1_Fn_Basic_Functions.js  # Type 1 — no params, no return (returns undefined)
-│   ├── 98_Type2_Fn_With_Param_No_Return.js  # Type 2 — params, no return
-│   ├── 99_Type3_Fn_without_Param_Return_Type.js # Type 3 — no params, with return
-│   ├── 100_Type4_Fn_With_Param_With_Return.js   # Type 4 — params + return (the standard form)
-│   ├── 101_Template_literal.js         # Return template literal — `Hello, ${name}`
-│   ├── 102_Fn_Expression.js            # Function expression — anonymous fn assigned to const
-│   └── 103_Arrow_Fn.js                 # Arrow function — concise ES6 form
-│
-└── README.md                           👋 You are here
+├── interview.md                        # JS interview notes
+└── README.md                           # 👋 You are here
 ```
 
-> Each chapter has its **own README.md** with full code walk-throughs and expected output. Jump straight in:
->
-> [Ch 1](./chapter_01_Basics/README.md) · [Ch 2](./chapter_02_Javascript_Concepts/README.md) · [Ch 3](./chapter_03_Identifier_Literals/README.md) · [Ch 4](./chapter_04_Javascript_Concepts/README.md) · [Ch 5](./chapter_05_Literal/README.md) · [Ch 6](./chapter_06_Operator/README.md) · [Ch 7](./chapter_07_If_else/README.md) · [Ch 8](./chapter_08_Switch_Statement/README.md) · [Ch 9](./chapter_09_UserInput/README.md) · [Ch 10](./chapter_10_Loops/README.md) · [Ch 11](./chapter_11_Arrays/README.md)
+> **Note:** This repo was restructured from 25 flat chapter directories into 8 tiered categories. Files retain their original lesson numbers (1–167) for cross-reference.
 
 > **Legend:** ✅ Done · 🚧 Coming soon
 
@@ -261,16 +175,16 @@ git clone https://github.com/PramodDutta/LearnPlaywrightBatch2x.git
 cd LearnPlaywrightBatch2x
 
 # 2. Verify your setup
-node chapter_01_Basics/03_JS_Verify_Setup.js
+node "01-javascript-basics/01-introduction/3-jsverify-setup.js"
 
 # 3. Run your first JS program
-node chapter_01_Basics/01_Basics.js
+node "01-javascript-basics/01-introduction/1-basic.js"
 ```
 
 ### Verify it works
 
 ```bash
-$ node chapter_01_Basics/01_Basics.js
+$ node "01-javascript-basics/01-introduction/1-basic.js"
 Hello The Testing Academy
 ```
 
@@ -400,10 +314,10 @@ mindmap
 ### Run them
 
 ```bash
-node chapter_01_Basics/01_Basics.js          # → "Hello The Testing Academy"
-node chapter_01_Basics/02_JS.js              # → counts to 100000 calling print()
-node chapter_01_Basics/03_JS_Verify_Setup.js # → prints platform / arch / node version
-node chapter_01_Basics/04_HotCode.js         # → triggers V8 hot-path optimization
+node "01-javascript-basics/01-introduction/1-basic.js"             # → "Hello The Testing Academy"
+node "01-javascript-basics/01-introduction/2-js.js"                # → counts to 100000 calling print()
+node "01-javascript-basics/01-introduction/3-jsverify-setup.js"    # → prints platform / arch / node version
+node "01-javascript-basics/01-introduction/4-hotcode.js"           # → triggers V8 hot-path optimization
 ```
 
 ---
@@ -499,10 +413,10 @@ mindmap
 ### Run them
 
 ```bash
-node chapter_04_Javascript_Concepts/09_var_let_const.js  # → var, let, const behavior
-node chapter_04_Javascript_Concepts/16_Hoisting.js       # → see hoisting in action
-node chapter_04_Javascript_Concepts/18_let_hoisting.js   # → throws TDZ ReferenceError
-node chapter_04_Javascript_Concepts/21_Jr_QA.js          # → interview-style TDZ trap
+node "01-javascript-basics/02-variables-hoisting/9-va-let-hoist.js"    # → var, let, const behavior
+node "01-javascript-basics/02-variables-hoisting/16-hoisting.js"       # → see hoisting in action
+node "01-javascript-basics/02-variables-hoisting/18-let-hoisting.js"   # → throws TDZ ReferenceError
+node "01-javascript-basics/02-variables-hoisting/21-jr-qa.js"          # → interview-style TDZ trap
 ```
 
 ### 18 — Temporal Dead Zone (TDZ)
@@ -602,10 +516,10 @@ mindmap
 ### Run them
 
 ```bash
-node chapter_05_Literal/22_Literal.js              # → typeof for each literal
-node chapter_05_Literal/23_null_undefined.js       # → null vs undefined walkthrough
-node chapter_05_Literal/26_Literal_Number_all.js   # → every number literal form
-node chapter_05_Literal/28_Template_Literal.js     # → backtick interpolation
+node "01-javascript-basics/03-literals-data-types/22-literal.js"              # → typeof for each literal
+node "01-javascript-basics/03-literals-data-types/23-null-undefined.js"       # → null vs undefined walkthrough
+node "01-javascript-basics/03-literals-data-types/26-literal-number-all.js"   # → every number literal form
+node "01-javascript-basics/03-literals-data-types/28-template-literal.js"     # → backtick interpolation
 ```
 
 ---
@@ -866,14 +780,12 @@ mindmap
 ### Run them
 
 ```bash
-node chapter_06_Operator/31_Arithmetic_OP.js          # → sum, sub, mul, div
-node chapter_06_Operator/32_Modulus_OP.js             # → 13 % 7, odd/even via % 2
-node chapter_06_Operator/36_Comparsion_Strict_loose.js # → 42 == "42" vs 42 === "42"
-node chapter_06_Operator/38_Confusing_Comparsion.js   # → full == vs === reference
-node chapter_06_Operator/41_Ternary_Op.js             # → ternary, nested, SLA, env URLs
-node chapter_06_Operator/43_Incre_Decre_Op.js         # → ++ / -- pre vs post
-node chapter_06_Operator/44_Null_Op.js                # → ?? nullish fallback
-node chapter_06_Operator/47_Advance_ID_.js            # → ++a + ++a IQ trap
+node "01-javascript-basics/04-operators/30-operator.js"         # → assignment operator
+node "01-javascript-basics/04-operators/31-arithmetic-op.js"    # → sum, sub, mul, div
+node "01-javascript-basics/04-operators/32-modulus-op.js"       # → 13 % 7, odd/even via % 2
+node "01-javascript-basics/04-operators/33-expo-op.js"          # → ** exponentiation
+node "01-javascript-basics/04-operators/34-iq.js"               # → compound assignment
+node "01-javascript-basics/04-operators/35-comparison-op.js"    # → comparison operators
 ```
 
 ---
@@ -1372,15 +1284,15 @@ mindmap
 ### Run them
 
 ```bash
-node chapter_07_If_else/48_IF_ESLE.js           # → "You are allowed to vote!"
-node chapter_07_If_else/49_If_elseif_else.js    # → grade for score = 78
-node chapter_07_If_else/50_REAL_IF_ELSE.js      # → role-based welcome message
-node chapter_07_If_else/51_API_IF_ELSE.js       # → API status messages
-node chapter_07_If_else/52_IQ_IF_ELSE.js        # → truthy / falsy surprise
-node chapter_07_If_else/53_IF_ELSE_real.js     # → "Allowed to enter"
-node chapter_07_If_else/56_IQ_EVEN_ODD.js      # → "7 is Odd"
-node chapter_07_If_else/57_Grade_Calc.js       # → "Grade: B"
-node chapter_07_If_else/58_LEAP_YEAR.js        # → "2024 is a Leap Year"
+node "02-control-flow/01-conditionals/48-ifelse.js"          # → "You are allowed to vote!"
+node "02-control-flow/01-conditionals/49-if-elseif-else.js"  # → grade for score = 78
+node "02-control-flow/01-conditionals/50-real-ex-ifelse.js"  # → role-based welcome message
+node "02-control-flow/01-conditionals/51-api-ex-if-ifelse-else.js" # → API status messages
+node "02-control-flow/01-conditionals/52-iq-ex-ifelse.js"    # → truthy / falsy surprise
+node "02-control-flow/01-conditionals/53-if-elseif-real.js"  # → "Allowed to enter"
+node "02-control-flow/01-conditionals/56-even-odd.js"        # → "7 is Odd"
+node "02-control-flow/01-conditionals/57-grade.js"           # → "Grade: B"
+node "02-control-flow/01-conditionals/58-leapyear.js"        # → "2024 is a Leap Year"
 ```
 
 ---
@@ -1457,7 +1369,7 @@ if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
 
 ## 📖 What's in Chapter 8 — Switch Statement (Available Now)
 
-> 🔗 **Full walk-through:** [chapter_08_Switch_Statement/README.md](./chapter_08_Switch_Statement/README.md)
+> 📁 **Location:** `02-control-flow/01-conditionals/`
 
 ### Files
 
@@ -1495,7 +1407,7 @@ mindmap
 
 ## 📖 What's in Chapter 9 — User Input (Available Now)
 
-> 🔗 **Full walk-through:** [chapter_09_UserInput/README.md](./chapter_09_UserInput/README.md)
+> 📁 **Location:** `02-control-flow/02-user-input/`
 
 ### Files
 
@@ -1536,7 +1448,7 @@ mindmap
 
 ## 📖 What's in Chapter 10 — Loops (Available Now)
 
-> 🔗 **Full walk-through:** [chapter_10_Loops/README.md](./chapter_10_Loops/README.md)
+> 📁 **Location:** `02-control-flow/03-loops/`
 
 ### Files
 
@@ -1579,18 +1491,18 @@ mindmap
 ### Run them
 
 ```bash
-node chapter_10_Loops/71_For_loop.js          # → 1 to 10 + introduction
-node chapter_10_Loops/72_For_loop.js          # → 0, 1, 2, 3, 4, 5
-node chapter_10_Loops/73_For_Loop2.js         # → 0 to 10 (11 iterations)
-node chapter_10_Loops/74_IQ.js               # → for + if/else
-node chapter_10_Loops/75_For_OF_IN_EACH.js   # → while retry
-node chapter_10_Loops/76_While.js            # → while countdown
-node chapter_10_Loops/77_Do_While.js         # → do-while guaranteed run
-node chapter_10_Loops/78_Do_While.js         # → do-while retry
-node chapter_10_Loops/79_IQ.js               # → 5, 4, 3, 2, 1
-node chapter_10_Loops/80_IQ.js               # → 0 (do-while off-by-one)
-node chapter_10_Loops/81_IQ.js               # → 0, 2 (continue skips 1)
-node chapter_10_Loops/82_IQ.js               # → 1 only (infinite if not careful)
+node "02-control-flow/03-loops/71-for-loop.js"                  # → 1 to 10 + introduction
+node "02-control-flow/03-loops/72-for-loop.js"                  # → 0, 1, 2, 3, 4, 5
+node "02-control-flow/03-loops/73-for-loop-1.js"                # → 0 to 10 (11 iterations)
+node "02-control-flow/03-loops/74-loops-iq.js"                  # → for + if/else
+node "02-control-flow/03-loops/75-for-in-of-each-loops.js"      # → while retry
+node "02-control-flow/03-loops/76-while-loop.js"                # → while countdown
+node "02-control-flow/03-loops/77-do-while.js"                  # → do-while guaranteed run
+node "02-control-flow/03-loops/78-do-while.js"                  # → do-while retry
+node "02-control-flow/03-loops/79-iq.js"                        # → 5, 4, 3, 2, 1
+node "02-control-flow/03-loops/80-iq.js"                        # → 0 (do-while off-by-one)
+node "02-control-flow/03-loops/81-iq.js"                        # → 0, 2 (continue skips 1)
+node "02-control-flow/03-loops/82-iq.js"                        # → 1 only (infinite if not careful)
 ```
 
 ### 71 — For Loop
@@ -1737,7 +1649,7 @@ do {
 
 ## 📖 What's in Chapter 11 — Arrays (Available Now)
 
-> 🔗 **Full walk-through:** [chapter_11_Arrays/README.md](./chapter_11_Arrays/README.md)
+> 📁 **Location:** `03-data-structures/01-arrays/`
 
 ### Files
 
@@ -1813,19 +1725,18 @@ mindmap
 ### Run them
 
 ```bash
-node chapter_11_Arrays/83_Arrays.js               # → array basics, index, mixed types
-node chapter_11_Arrays/84_Arrays.js               # → Array constructor, Array.of, Array.from
-node chapter_11_Arrays/85_Access_Array.js         # → access, .at(-1), modify
-node chapter_11_Arrays/86_Arrays_Adding_Remove.js # → push, pop, unshift, shift
-node chapter_11_Arrays/87_Adding_Remove2.js       # → splice add/remove/replace
-node chapter_11_Arrays/88_REAL_Example.js         # → real browser list example
-node chapter_11_Arrays/89_Searching.js            # → indexOf, includes, find, findIndex
-node chapter_11_Arrays/90_Iterate.js              # → 5 ways to iterate arrays
-node chapter_11_Arrays/91_Transform_Array.js      # → map, filter, reduce, flat
-node chapter_11_Arrays/92_Arrays.js               # → sort default (lexicographic) + numeric/desc
-node chapter_11_Arrays/93_Array_Slicing.js        # → slice vs splice
-node chapter_11_Arrays/94_Concat_array.js         # → concat, spread, join
-node chapter_11_Arrays/95_Array_Checking.js       # → Array.isArray, every, some
+node "03-data-structures/01-arrays/83-array.js"                    # → array basics, index, mixed types
+node "03-data-structures/01-arrays/84-array.js"                    # → Array constructor, Array.of, Array.from
+node "03-data-structures/01-arrays/85-array.js"                    # → access, .at(-1), modify
+node "03-data-structures/01-arrays/86-array-adding-removing.js"    # → push, pop, unshift, shift
+node "03-data-structures/01-arrays/87-arrays-adding-removing-2.js" # → splice add/remove/replace
+node "03-data-structures/01-arrays/88-real-example.js"             # → real browser list example
+node "03-data-structures/01-arrays/90-iterate.js"                  # → 5 ways to iterate arrays
+node "03-data-structures/01-arrays/91-transform-array.js"          # → map, filter, reduce, flat
+node "03-data-structures/01-arrays/92-array.js"                    # → sort default (lexicographic) + numeric/desc
+node "03-data-structures/01-arrays/93-array-slicing.js"            # → slice vs splice
+node "03-data-structures/01-arrays/94-concat.js"                   # → concat, spread, join
+node "03-data-structures/01-arrays/95-arrays-checking.js"          # → Array.isArray, every, some
 ```
 
 ### 83 — Arrays Basics
@@ -2274,14 +2185,14 @@ mindmap
 ### Run them
 
 ```bash
-node chapter_12_Funtions/96_Functions.js                       # → "Hi, how are you?"
-node chapter_12_Funtions/97_Type1_Fn_Basic_Functions.js        # → "Hi" + undefined
-node chapter_12_Funtions/98_Type2_Fn_With_Param_No_Return.js   # → "Hi Pramod" + undefined
-node chapter_12_Funtions/99_Type3_Fn_without_Param_Return_Type.js # → "Hi" then "Hello"
-node chapter_12_Funtions/100_Type4_Fn_With_Param_With_Return.js   # → 9
-node chapter_12_Funtions/101_Template_literal.js               # → "Hello, Alice"
-node chapter_12_Funtions/102_Fn_Expression.js                  # → "Hello, Pramod"
-node chapter_12_Funtions/103_Arrow_Fn.js                       # → 20, then "Dutta"
+node "04-functions/96-function-basic.js"                          # → "Hi, how are you?"
+node "04-functions/97-function-type1-basic.js"                    # → "Hi" + undefined
+node "04-functions/98-function-type2-with-param-noreturn.js"      # → "Hi Pramod" + undefined
+node "04-functions/99-fn-type3-withoutparam-returntype.js"        # → "Hi" then "Hello"
+node "04-functions/100-fn-type4-withparam-return.js"              # → 9
+node "04-functions/101-template-literal.js"                       # → "Hello, Alice"
+node "04-functions/102-function-expression.js"                    # → "Hello, Pramod"
+node "04-functions/103-arrow-fn.js"                               # → 20, then "Dutta"
 ```
 
 ---

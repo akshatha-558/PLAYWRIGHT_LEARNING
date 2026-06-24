@@ -1,10 +1,10 @@
-// Comparsion Op - true / false - boolean
+// Comparison Op - true / false - boolean
 
 // > , < , >= , <= , == , === , !, !=, !===
 
-// = -> Assignment opearator
-// == -> losse comparsion ( sikh vs hindu )
-// === -> strict comparsion ( sikh vs hindu , languge, living)
+// = -> Assignment operator
+// == -> loose comparison ( sikh vs hindu )
+// === -> strict comparison ( sikh vs hindu , languge, living)
 
 
 console.log(3 > 4);

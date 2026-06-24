@@ -6,8 +6,8 @@ Three ways to read user input in JavaScript: the **browser-only** `prompt()`, No
 
 | File | Approach | Runtime | Sync/Async | Needs install |
 |---|---|---|---|---|
-| `68_User_Input.js` | `prompt()` | Browser only | Sync | No |
-| `69_Node_readline.js` | `readline` (built-in) | Node | Async (callback) | No |
+| `68_user_input.js` | `prompt()` | Browser only | Sync | No |
+| `69_node_readline.js` | `readline` (built-in) | Node | Async (callback) | No |
 | `70_prompt_sync.js` | `prompt-sync` (npm) | Node | Sync | Yes — `npm i prompt-sync` |
 
 ## Concepts covered
@@ -19,7 +19,7 @@ Three ways to read user input in JavaScript: the **browser-only** `prompt()`, No
 
 ---
 
-### 68_User_Input.js
+### 68_user_input.js
 
 Uses the browser global `prompt()` to read input synchronously, converts it to a number, and prints Even/Odd. Run this in a browser console or as a `<script>` — **not** in Node.
 
@@ -43,13 +43,13 @@ Expected output (browser console, user types `7`):
 If you run this in Node:
 
 ```bash
-$ node 68_User_Input.js
+$ node 68_user_input.js
 ReferenceError: prompt is not defined
 ```
 
 ---
 
-### 69_Node_readline.js
+### 69_node_readline.js
 
 Node's built-in `readline` module — async callback API. The whole file ships **commented out** in the repo; below is the uncommented working version (with the `r1.close()` typo from the file fixed to `rl.close()`).
 
@@ -77,7 +77,7 @@ rl.question("Enter a number: ", (input) => {
 Expected output:
 
 ```bash
-$ node 69_Node_readline.js
+$ node 69_node_readline.js
 Enter a number: 4
 4 is Even
 ```
@@ -125,17 +125,17 @@ Enter a number: 9
 
 ```bash
 # 68 — will FAIL in Node with ReferenceError: prompt is not defined
-node chapter_09_UserInput/68_User_Input.js
+node chapter_09_UserInput/68_user_input.js
 
 # 69 — works after uncommenting the file (built-in module, no install)
-node chapter_09_UserInput/69_Node_readline.js
+node chapter_09_UserInput/69_node_readline.js
 
 # 70 — install first, then uncomment the file
 npm install prompt-sync
 node chapter_09_UserInput/70_prompt_sync.js
 ```
 
-Tip for `68_User_Input.js`: paste the code into your browser's DevTools Console, or wrap it in an HTML `<script>` tag and open the file in a browser.
+Tip for `68_user_input.js`: paste the code into your browser's DevTools Console, or wrap it in an HTML `<script>` tag and open the file in a browser.
 
 ## Takeaway
 
