@@ -1,0 +1,1 @@
+Task 12th June 2026 | Mandatory 150 exercises in every GitHub repository

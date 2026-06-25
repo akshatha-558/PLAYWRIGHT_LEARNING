@@ -1,0 +1,1 @@
+Task 19th June 2026 | Practice and research about the object and classes
